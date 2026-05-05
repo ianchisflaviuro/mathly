@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Rezultat Test – {{ lectie.titlu }} – Mathly{% endblock %}
+{% block body_class %}app-body{% endblock %}
+
+{% block content %}
+<div class="app-container lesson-container">
+
+  <div class="lesson-header">
+    <a href="{{ url_for('dashboard') }}" class="back-link">← Dashboard</a>
+    <div class="lesson-meta">
+      <span class="lesson-module-badge">{{ lectie.modul }}</span>
+      <h1 class="lesson-title">Rezultat: {{ lectie.titlu }}</h1>
+    </div>
+  </div>
+
+  <!-- Scor mare -->
+  <div class="score-card {% if scor >= 80 %}score-great{% elif scor >= 60 %}score-ok{% else %}score-poor{% endif %}">
+    <div class="score-circle">
+      <span class="score-num">{{ scor }}</span>
+      <span class="score-max">/100</span>
+    </div>
+    <div class="score-text">
+      {% if scor == 100 %}
+        🏆 Perfect! Ai stăpânit această lecție!
+      {% elif scor >= 80 %}
+        🎉 Foarte bine! Ai înțeles lecția!
+      {% elif scor >= 60 %}
+        👍 Bine, dar mai ai de lucru la câteva concepte.
+      {% elif scor >= 40 %}
+        😐 Trebuie să revizuiești lecția.
+      {% else %}
+        📚 Recitește lecția și încearcă din nou conceptele.
+      {% endif %}
+    </div>
+    <div class="score-detail">
+      {{ rezultate | selectattr('corect') | list | length }} corecte din {{ rezultate | length }} întrebări
+    </div>
+  </div>
+
+  <!-- Rezultate detaliate -->
+  <h2 class="results-section-title">Răspunsurile tale</h2>
+
+  {% for r in rezultate %}
+  <div class="result-item {% if r.corect %}result-correct{% else %}result-wrong{% endif %}">
+    <div class="result-header">
+      <span class="result-icon">{% if r.corect %}✅{% else %}❌{% endif %}</span>
+      <span class="result-q-num">Întrebarea {{ loop.index }}</span>
+    </div>
+    <div class="result-question">{{ r.intrebare }}</div>
+    <div class="result-answers">
+      <div class="result-answer-row">
+        <span class="result-label">Răspunsul tău:</span>
+        <span class="result-value {% if r.corect %}answer-correct{% else %}answer-wrong{% endif %}">
+          {{ r.raspuns_dat if r.raspuns_dat else '(fără răspuns)' }}
+        </span>
+      </div>
+      {% if not r.corect %}
+      <div class="result-answer-row">
+        <span class="result-label">Răspuns corect:</span>
+        <span class="result-value answer-correct">{{ r.raspuns_corect }}</span>
+      </div>
+      {% endif %}
+    </div>
+    <div class="result-explanation">
+      💡 {{ r.explicatie }}
+    </div>
+  </div>
+  {% endfor %}
+
+  <!-- Acțiuni finale -->
+  <div class="result-actions">
+    <a href="{{ url_for('dashboard') }}" class="btn btn-primary">← Înapoi la Dashboard</a>
+  </div>
+
+</div>
+{% endblock %}

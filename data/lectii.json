@@ -1,0 +1,742 @@
+[
+  {
+    "id": "fractii_1",
+    "titlu": "Ce este o fracție",
+    "modul": "Numere și fracții",
+    "descriere": "Înveți ce înseamnă o fracție, numărătorul și numitorul.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "O <strong>fracție</strong> reprezintă o parte dintr-un întreg. Se scrie ca a/b, unde <strong>a</strong> este numărătorul (câte părți ai) și <strong>b</strong> este numitorul (în câte părți egale este împărțit întregul).<br><br>Exemplu: 1/4 înseamnă că ai 1 parte dintr-un întreg împărțit în 4 părți egale (un sfert dintr-o pizza).",
+        "intrebare": "Dacă o pizza este tăiată în 8 felii și tu mănânci 3, ce fracție reprezintă ce ai mâncat?",
+        "tip": "alegere",
+        "optiuni": ["3/8", "8/3", "5/8", "1/3"],
+        "raspuns_corect": "3/8",
+        "explicatie_gresit": "Numărătorul este câte felii ai mâncat (3), iar numitorul este totalul feliilor (8). Deci fracția este 3/8."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Numitorul <strong>nu poate fi niciodată 0</strong>. Nu poți împărți ceva în 0 părți egale — nu are sens matematic.<br><br>Numărătorul poate fi 0 (0/5 = 0, nu ai nicio parte).",
+        "intrebare": "Care dintre următoarele fracții este corect definită?",
+        "tip": "alegere",
+        "optiuni": ["0/7", "5/0", "0/0", "Niciuna"],
+        "raspuns_corect": "0/7",
+        "explicatie_gresit": "0/7 este validă (valoarea ei este 0). Fracțiile cu numitor 0 (5/0, 0/0) nu sunt definite în matematică."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "O fracție <strong>proprie</strong> are numărătorul mai mic decât numitorul (ex: 3/5). Valoarea ei este mai mică decât 1.<br><br>O fracție <strong>improprie</strong> are numărătorul mai mare sau egal cu numitorul (ex: 7/4). Valoarea ei este ≥ 1.",
+        "intrebare": "Care dintre aceste fracții este proprie?",
+        "tip": "alegere",
+        "optiuni": ["7/3", "5/5", "2/9", "11/4"],
+        "raspuns_corect": "2/9",
+        "explicatie_gresit": "O fracție proprie are numărătorul mai mic decât numitorul. Singura variantă care satisface această condiție este 2/9 (2 < 9)."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Fracțiile <strong>echivalente</strong> sunt fracții diferite ca scriere, dar cu aceeași valoare.<br><br>1/2 = 2/4 = 3/6 = 4/8<br><br>Se obțin înmulțind sau împărțind atât numărătorul cât și numitorul cu același număr (nenul).",
+        "intrebare": "Care fracție este echivalentă cu 2/3?",
+        "tip": "alegere",
+        "optiuni": ["4/6", "3/4", "2/4", "6/4"],
+        "raspuns_corect": "4/6",
+        "explicatie_gresit": "2/3 = (2×2)/(3×2) = 4/6. Verificare: 2×6 = 12 și 3×4 = 12 ✓"
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Un <strong>număr mixt</strong> combină o parte întreagă și o fracție proprie. Exemplu: 2 și 3/4 înseamnă 2 + 3/4.<br><br>Transformare: 2 și 3/4 = (2×4 + 3)/4 = 11/4",
+        "intrebare": "Cât este fracția improprie corespunzătoare lui 3 și 1/2?",
+        "tip": "alegere",
+        "optiuni": ["7/2", "6/2", "4/2", "5/2"],
+        "raspuns_corect": "7/2",
+        "explicatie_gresit": "3 și 1/2 = (3×2 + 1)/2 = (6+1)/2 = 7/2"
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {
+          "id": "q1",
+          "intrebare": "Într-o fracție a/b, ce reprezintă b?",
+          "tip": "alegere",
+          "optiuni": ["Numărătorul", "Numitorul", "Valoarea fracției", "Restul"],
+          "raspuns_corect": "Numitorul",
+          "explicatie": "b este numitorul — în câte părți egale este împărțit întregul."
+        },
+        {
+          "id": "q2",
+          "intrebare": "Care fracție are valoarea 0?",
+          "tip": "alegere",
+          "optiuni": ["1/0", "0/1", "5/5", "3/3"],
+          "raspuns_corect": "0/1",
+          "explicatie": "0/1 = 0. Orice fracție cu numărătorul 0 și numitorul nenul are valoarea 0."
+        },
+        {
+          "id": "q3",
+          "intrebare": "Ce fracție reprezintă jumătate?",
+          "tip": "alegere",
+          "optiuni": ["2/1", "1/3", "1/2", "2/3"],
+          "raspuns_corect": "1/2",
+          "explicatie": "1/2 înseamnă 1 parte din 2 — exact jumătate."
+        },
+        {
+          "id": "q4",
+          "intrebare": "Care dintre fracțiile de mai jos este improprie?",
+          "tip": "alegere",
+          "optiuni": ["3/7", "1/5", "9/4", "2/11"],
+          "raspuns_corect": "9/4",
+          "explicatie": "9/4 este improprie deoarece numărătorul (9) > numitorul (4)."
+        },
+        {
+          "id": "q5",
+          "intrebare": "Ce fracție este echivalentă cu 1/3?",
+          "tip": "alegere",
+          "optiuni": ["2/5", "3/9", "4/9", "2/7"],
+          "raspuns_corect": "3/9",
+          "explicatie": "1/3 = (1×3)/(3×3) = 3/9. Verificare: 1×9 = 9 = 3×3 ✓"
+        },
+        {
+          "id": "q6",
+          "intrebare": "Dacă tai un tort în 6 felii egale și dai 4 felii, ce fracție ai dat?",
+          "tip": "alegere",
+          "optiuni": ["2/6", "6/4", "4/6", "4/10"],
+          "raspuns_corect": "4/6",
+          "explicatie": "Ai dat 4 felii din 6 totale → 4/6."
+        },
+        {
+          "id": "q7",
+          "intrebare": "Numărul mixt 1 și 3/4 este egal cu ce fracție improprie?",
+          "tip": "alegere",
+          "optiuni": ["4/4", "5/4", "7/4", "6/4"],
+          "raspuns_corect": "7/4",
+          "explicatie": "1 și 3/4 = (1×4 + 3)/4 = 7/4"
+        },
+        {
+          "id": "q8",
+          "intrebare": "Care este numărătorul fracției 5/9?",
+          "tip": "alegere",
+          "optiuni": ["9", "5", "4", "14"],
+          "raspuns_corect": "5",
+          "explicatie": "În fracția 5/9, numărătorul este 5 (deasupra liniei)."
+        },
+        {
+          "id": "q9",
+          "intrebare": "Fracția 6/6 este egală cu:",
+          "tip": "alegere",
+          "optiuni": ["0", "6", "1", "2"],
+          "raspuns_corect": "1",
+          "explicatie": "Orice fracție cu numărătorul egal cu numitorul (nenul) este egală cu 1."
+        },
+        {
+          "id": "q10",
+          "intrebare": "Care fracție NU este echivalentă cu 2/4?",
+          "tip": "alegere",
+          "optiuni": ["1/2", "4/8", "3/6", "2/6"],
+          "raspuns_corect": "2/6",
+          "explicatie": "2/4 = 1/2 = 4/8 = 3/6. Dar 2/6 = 1/3 ≠ 1/2."
+        }
+      ]
+    }
+  },
+  {
+    "id": "fractii_2",
+    "titlu": "Compararea fracțiilor",
+    "modul": "Numere și fracții",
+    "descriere": "Înveți cum să compari fracții cu același numitor sau numitori diferiți.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "Dacă două fracții au <strong>același numitor</strong>, compararea e simplă: fracția cu numărătorul mai mare este mai mare.<br><br>Exemplu: 3/7 vs 5/7 → 5/7 > 3/7 (deoarece 5 > 3)",
+        "intrebare": "Care este mai mare: 4/9 sau 7/9?",
+        "tip": "alegere",
+        "optiuni": ["4/9", "7/9", "Sunt egale", "Nu se poate compara"],
+        "raspuns_corect": "7/9",
+        "explicatie_gresit": "Numitorii sunt egali (9), deci comparăm numărătorii: 7 > 4, deci 7/9 > 4/9."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Dacă două fracții au <strong>același numărător</strong>, fracția cu numitorul mai mic este mai mare (împărțim în mai puține bucăți, deci fiecare e mai mare).<br><br>Exemplu: 3/4 vs 3/7 → 3/4 > 3/7 (deoarece 4 < 7)",
+        "intrebare": "Care este mai mare: 2/5 sau 2/11?",
+        "tip": "alegere",
+        "optiuni": ["2/5", "2/11", "Sunt egale", "Nu se poate determina"],
+        "raspuns_corect": "2/5",
+        "explicatie_gresit": "Numărătorii sunt egali (2). Numitorul mai mic înseamnă fracție mai mare: 5 < 11, deci 2/5 > 2/11."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Pentru fracții cu <strong>numitori diferiți</strong>, trebuie să le aducem la un numitor comun (cel mai mic multiplu comun - CMMMC).<br><br>Exemplu: 1/3 vs 1/4<br>CMMMC(3,4) = 12<br>1/3 = 4/12 și 1/4 = 3/12<br>Deci 1/3 > 1/4",
+        "intrebare": "Care este mai mare: 2/3 sau 3/4?",
+        "tip": "alegere",
+        "optiuni": ["2/3", "3/4", "Sunt egale", "Nu se poate determina"],
+        "raspuns_corect": "3/4",
+        "explicatie_gresit": "CMMMC(3,4)=12. 2/3=8/12 și 3/4=9/12. Deoarece 9>8, avem 3/4 > 2/3."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "O metodă rapidă: înmulțiți <strong>în cruce</strong>.<br>a/b vs c/d: calculezi a×d și b×c.<br><br>Dacă a×d > b×c → a/b > c/d<br>Dacă a×d < b×c → a/b < c/d<br><br>Exemplu: 3/5 vs 4/7<br>3×7 = 21 și 5×4 = 20<br>21 > 20 → 3/5 > 4/7",
+        "intrebare": "Folosind înmulțirea în cruce, care este mai mare: 5/8 sau 7/11?",
+        "tip": "alegere",
+        "optiuni": ["5/8", "7/11", "Sunt egale", "Metoda nu funcționează"],
+        "raspuns_corect": "7/11",
+        "explicatie_gresit": "5×11=55 și 8×7=56. Deoarece 55 < 56, avem 5/8 < 7/11, deci 7/11 este mai mare."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Puteți compara fracțiile și transformându-le în <strong>numere zecimale</strong>.<br><br>1/4 = 0.25<br>1/3 ≈ 0.333...<br><br>Deci 1/3 > 1/4",
+        "intrebare": "Ordonează crescător: 1/2, 1/3, 3/4",
+        "tip": "alegere",
+        "optiuni": ["1/3 < 1/2 < 3/4", "1/2 < 1/3 < 3/4", "3/4 < 1/2 < 1/3", "1/3 < 3/4 < 1/2"],
+        "raspuns_corect": "1/3 < 1/2 < 3/4",
+        "explicatie_gresit": "1/3≈0.33, 1/2=0.5, 3/4=0.75. Ordine crescătoare: 1/3 < 1/2 < 3/4."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "Care este mai mare: 5/8 sau 3/8?", "tip": "alegere", "optiuni": ["5/8", "3/8", "Egale", "Imposibil"], "raspuns_corect": "5/8", "explicatie": "Același numitor (8): 5 > 3, deci 5/8 > 3/8."},
+        {"id": "q2", "intrebare": "Care este mai mică: 3/5 sau 3/7?", "tip": "alegere", "optiuni": ["3/5", "3/7", "Egale", "Imposibil"], "raspuns_corect": "3/7", "explicatie": "Același numărător (3): numitor mai mare → fracție mai mică. 7>5, deci 3/7 < 3/5."},
+        {"id": "q3", "intrebare": "Compară: 2/3 și 3/5", "tip": "alegere", "optiuni": ["2/3 > 3/5", "2/3 < 3/5", "2/3 = 3/5", "Nu se poate"], "raspuns_corect": "2/3 > 3/5", "explicatie": "2×5=10, 3×3=9. 10>9, deci 2/3 > 3/5."},
+        {"id": "q4", "intrebare": "Care este mai mare: 7/10 sau 3/4?", "tip": "alegere", "optiuni": ["7/10", "3/4", "Egale", "Nu se poate"], "raspuns_corect": "3/4", "explicatie": "7×4=28, 10×3=30. 28<30, deci 7/10 < 3/4."},
+        {"id": "q5", "intrebare": "Ordonează crescător: 2/5, 1/2, 3/10", "tip": "alegere", "optiuni": ["3/10 < 2/5 < 1/2", "2/5 < 3/10 < 1/2", "1/2 < 2/5 < 3/10", "3/10 < 1/2 < 2/5"], "raspuns_corect": "3/10 < 2/5 < 1/2", "explicatie": "CMMMC=10: 3/10=3/10, 2/5=4/10, 1/2=5/10. Ordine: 3/10 < 4/10 < 5/10."},
+        {"id": "q6", "intrebare": "Este 4/6 mai mare decât 5/9?", "tip": "alegere", "optiuni": ["Da", "Nu", "Sunt egale", "Nu se poate determina"], "raspuns_corect": "Da", "explicatie": "4×9=36, 6×5=30. 36>30, deci 4/6 > 5/9."},
+        {"id": "q7", "intrebare": "Care fracție este cea mai mică?", "tip": "alegere", "optiuni": ["1/4", "1/6", "1/3", "1/2"], "raspuns_corect": "1/6", "explicatie": "Același numărător (1): numitor cel mai mare → fracție cea mai mică. 6 este cel mai mare numitor."},
+        {"id": "q8", "intrebare": "Compară: 9/10 și 10/11", "tip": "alegere", "optiuni": ["9/10 > 10/11", "9/10 < 10/11", "Egale", "Nu se poate"], "raspuns_corect": "9/10 < 10/11", "explicatie": "9×11=99, 10×10=100. 99<100, deci 9/10 < 10/11."},
+        {"id": "q9", "intrebare": "Câte fracții din lista {1/2, 2/4, 3/6} sunt egale între ele?", "tip": "alegere", "optiuni": ["0", "1", "2", "3"], "raspuns_corect": "3", "explicatie": "1/2 = 2/4 = 3/6 (toate sunt fracții echivalente egale cu 0.5). Toate 3 sunt egale."},
+        {"id": "q10", "intrebare": "Care afirmație este adevărată?", "tip": "alegere", "optiuni": ["3/4 < 2/3", "5/6 > 7/8", "1/5 > 1/4", "2/7 < 3/7"], "raspuns_corect": "2/7 < 3/7", "explicatie": "Același numitor (7): 2 < 3, deci 2/7 < 3/7 ✓"}
+      ]
+    }
+  },
+  {
+    "id": "fractii_3",
+    "titlu": "Simplificarea fracțiilor",
+    "modul": "Numere și fracții",
+    "descriere": "Înveți să simplifici fracțiile folosind cel mai mare divizor comun.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "O fracție este în <strong>forma simplificată</strong> (ireductibilă) când numărătorul și numitorul nu mai au factori comuni în afară de 1.<br><br>Exemplu: 4/6 nu este simplificată (ambele se împart la 2), dar 2/3 este simplificată.",
+        "intrebare": "Care fracție este deja simplificată?",
+        "tip": "alegere",
+        "optiuni": ["4/8", "6/9", "5/7", "10/15"],
+        "raspuns_corect": "5/7",
+        "explicatie_gresit": "5 și 7 sunt numere prime diferite, nu au factori comuni în afară de 1. Deci 5/7 este ireductibilă."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Cel mai mare <strong>Divizor Comun (CMMDC)</strong> a două numere este cel mai mare număr care le divide pe amândouă fără rest.<br><br>CMMDC(12, 8): divizorii lui 12: 1,2,3,4,6,12; ai lui 8: 1,2,4,8. CMMDC = 4",
+        "intrebare": "Care este CMMDC al numerelor 18 și 24?",
+        "tip": "alegere",
+        "optiuni": ["2", "4", "6", "12"],
+        "raspuns_corect": "6",
+        "explicatie_gresit": "Divizorii lui 18: 1,2,3,6,9,18. Divizorii lui 24: 1,2,3,4,6,8,12,24. CMMDC = 6."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Pentru a simplifica o fracție, <strong>împarți</strong> atât numărătorul cât și numitorul la CMMDC-ul lor.<br><br>Exemplu: 12/18<br>CMMDC(12,18) = 6<br>12/18 = (12÷6)/(18÷6) = 2/3",
+        "intrebare": "Simplificați fracția 15/25.",
+        "tip": "alegere",
+        "optiuni": ["3/5", "5/8", "2/3", "1/2"],
+        "raspuns_corect": "3/5",
+        "explicatie_gresit": "CMMDC(15,25)=5. 15÷5=3, 25÷5=5. Deci 15/25 = 3/5."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Poți simplifica și în <strong>etape</strong>, dacă nu găsești imediat CMMDC-ul maxim.<br><br>24/36: împarte la 2 → 12/18, împarte la 2 → 6/9, împarte la 3 → 2/3.<br><br>Sau direct: CMMDC(24,36)=12 → 24/36 = 2/3",
+        "intrebare": "Care este forma simplificată a fracției 36/48?",
+        "tip": "alegere",
+        "optiuni": ["3/4", "6/8", "9/12", "2/3"],
+        "raspuns_corect": "3/4",
+        "explicatie_gresit": "CMMDC(36,48)=12. 36÷12=3, 48÷12=4. Deci 36/48 = 3/4."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Fracțiile cu <strong>numere prime</strong> la numărător și numitor sunt automat simplificate (dacă cele două numere sunt diferite).<br><br>Exemplu: 7/11 — ambele prime și diferite → ireductibilă.<br>Atenție: 3/9 → 9 nu e prim, deci verifică: CMMDC(3,9)=3 → 1/3",
+        "intrebare": "Simplificați: 14/21",
+        "tip": "alegere",
+        "optiuni": ["2/3", "7/10", "1/2", "4/6"],
+        "raspuns_corect": "2/3",
+        "explicatie_gresit": "CMMDC(14,21)=7. 14÷7=2, 21÷7=3. Deci 14/21 = 2/3."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "Care este CMMDC al lui 8 și 12?", "tip": "alegere", "optiuni": ["2", "4", "6", "8"], "raspuns_corect": "4", "explicatie": "Divizorii lui 8: 1,2,4,8. Ai lui 12: 1,2,3,4,6,12. CMMDC=4."},
+        {"id": "q2", "intrebare": "Simplificați 6/10.", "tip": "alegere", "optiuni": ["3/5", "2/4", "1/2", "6/10"], "raspuns_corect": "3/5", "explicatie": "CMMDC(6,10)=2. 6÷2=3, 10÷2=5. Rezultat: 3/5."},
+        {"id": "q3", "intrebare": "Simplificați 20/30.", "tip": "alegere", "optiuni": ["4/6", "2/3", "10/15", "1/2"], "raspuns_corect": "2/3", "explicatie": "CMMDC(20,30)=10. 20÷10=2, 30÷10=3. Rezultat: 2/3."},
+        {"id": "q4", "intrebare": "Care fracție este ireductibilă?", "tip": "alegere", "optiuni": ["4/10", "9/12", "7/13", "6/8"], "raspuns_corect": "7/13", "explicatie": "7 și 13 sunt ambele prime și diferite, deci CMMDC(7,13)=1. Fracția este ireductibilă."},
+        {"id": "q5", "intrebare": "Simplificați 45/60.", "tip": "alegere", "optiuni": ["3/4", "9/12", "15/20", "7/8"], "raspuns_corect": "3/4", "explicatie": "CMMDC(45,60)=15. 45÷15=3, 60÷15=4. Rezultat: 3/4."},
+        {"id": "q6", "intrebare": "Ce se întâmplă când împarți numărătorul și numitorul la CMMDC?", "tip": "alegere", "optiuni": ["Valoarea fracției se schimbă", "Fracția devine mai mare", "Fracția rămâne echivalentă dar simplificată", "Fracția devine invalidă"], "raspuns_corect": "Fracția rămâne echivalentă dar simplificată", "explicatie": "Împărțind la același număr (CMMDC), fracția rămâne echivalentă (aceeași valoare), dar în forma simplificată."},
+        {"id": "q7", "intrebare": "Simplificați 100/150.", "tip": "alegere", "optiuni": ["10/15", "2/3", "50/75", "4/6"], "raspuns_corect": "2/3", "explicatie": "CMMDC(100,150)=50. 100÷50=2, 150÷50=3. Rezultat: 2/3."},
+        {"id": "q8", "intrebare": "CMMDC(16, 24) = ?", "tip": "alegere", "optiuni": ["4", "6", "8", "12"], "raspuns_corect": "8", "explicatie": "Divizorii lui 16: 1,2,4,8,16. Ai lui 24: 1,2,3,4,6,8,12,24. CMMDC=8."},
+        {"id": "q9", "intrebare": "Simplificați 8/32.", "tip": "alegere", "optiuni": ["2/8", "1/4", "4/16", "1/3"], "raspuns_corect": "1/4", "explicatie": "CMMDC(8,32)=8. 8÷8=1, 32÷8=4. Rezultat: 1/4."},
+        {"id": "q10", "intrebare": "Care este echivalentă cu 3/4 și este simplificată?", "tip": "alegere", "optiuni": ["6/8", "9/12", "3/4", "12/16"], "raspuns_corect": "3/4", "explicatie": "3/4 este deja simplificată (CMMDC(3,4)=1). Celelalte pot fi simplificate la 3/4."}
+      ]
+    }
+  },
+  {
+    "id": "fractii_4",
+    "titlu": "Adunarea fracțiilor",
+    "modul": "Numere și fracții",
+    "descriere": "Înveți să aduni fracții cu același numitor și cu numitori diferiți.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "Dacă fracțiile au <strong>același numitor</strong>, aduni doar numărătorii și păstrezi numitorul.<br><br>a/n + b/n = (a+b)/n<br><br>Exemplu: 2/7 + 3/7 = (2+3)/7 = 5/7",
+        "intrebare": "Calculați: 3/8 + 4/8 = ?",
+        "tip": "alegere",
+        "optiuni": ["7/8", "7/16", "1/8", "12/8"],
+        "raspuns_corect": "7/8",
+        "explicatie_gresit": "Numitori egali: adunăm numărătorii. 3+4=7, numitorul rămâne 8. Rezultat: 7/8."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Dacă fracțiile au <strong>numitori diferiți</strong>, trebuie să găsim CMMMC (cel mai mic multiplu comun) și să amplificăm fracțiile.<br><br>1/4 + 1/6:<br>CMMMC(4,6)=12<br>1/4 = 3/12 și 1/6 = 2/12<br>3/12 + 2/12 = 5/12",
+        "intrebare": "Calculați: 1/3 + 1/4 = ?",
+        "tip": "alegere",
+        "optiuni": ["2/7", "7/12", "2/12", "5/12"],
+        "raspuns_corect": "7/12",
+        "explicatie_gresit": "CMMMC(3,4)=12. 1/3=4/12 și 1/4=3/12. Suma: 4/12+3/12=7/12."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "La final, <strong>simplifică</strong> rezultatul dacă este posibil.<br><br>1/6 + 1/3 = 1/6 + 2/6 = 3/6 = <strong>1/2</strong> (simplificat)",
+        "intrebare": "Calculați și simplificați: 1/4 + 1/4 = ?",
+        "tip": "alegere",
+        "optiuni": ["2/4", "1/2", "2/8", "1/4"],
+        "raspuns_corect": "1/2",
+        "explicatie_gresit": "1/4 + 1/4 = 2/4. Simplificăm: CMMDC(2,4)=2, deci 2/4 = 1/2."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Când aduni <strong>numere mixte</strong>, aduni separat partea întreagă și fracțiile.<br><br>1 și 1/3 + 2 și 1/6:<br>Întregi: 1+2=3<br>Fracții: 1/3+1/6=2/6+1/6=3/6=1/2<br>Rezultat: 3 și 1/2",
+        "intrebare": "Calculați: 2 și 1/4 + 1 și 1/4 = ?",
+        "tip": "alegere",
+        "optiuni": ["3 și 2/4", "3 și 1/2", "4 și 1/4", "3 și 1/4"],
+        "raspuns_corect": "3 și 1/2",
+        "explicatie_gresit": "Întregi: 2+1=3. Fracții: 1/4+1/4=2/4=1/2. Rezultat: 3 și 1/2."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Uneori suma fracțiilor dă o fracție <strong>improprie</strong> care trebuie convertită.<br><br>3/4 + 3/4 = 6/4 = 1 și 2/4 = 1 și 1/2<br><br>6÷4 = 1 rest 2, deci 1 și 2/4 = 1 și 1/2",
+        "intrebare": "Calculați: 5/6 + 2/3 = ?",
+        "tip": "alegere",
+        "optiuni": ["7/9", "1 și 1/2", "7/6", "1 și 1/6"],
+        "raspuns_corect": "1 și 1/2",
+        "explicatie_gresit": "2/3=4/6. Suma: 5/6+4/6=9/6=3/2=1 și 1/2."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "2/5 + 1/5 = ?", "tip": "alegere", "optiuni": ["3/10", "3/5", "3/25", "2/5"], "raspuns_corect": "3/5", "explicatie": "Același numitor: 2+1=3, numitorul rămâne 5. Rezultat: 3/5."},
+        {"id": "q2", "intrebare": "1/2 + 1/3 = ?", "tip": "alegere", "optiuni": ["2/5", "2/6", "5/6", "1/6"], "raspuns_corect": "5/6", "explicatie": "CMMMC(2,3)=6. 1/2=3/6, 1/3=2/6. Suma: 5/6."},
+        {"id": "q3", "intrebare": "3/4 + 1/8 = ?", "tip": "alegere", "optiuni": ["4/12", "7/8", "1/2", "4/8"], "raspuns_corect": "7/8", "explicatie": "CMMMC(4,8)=8. 3/4=6/8. Suma: 6/8+1/8=7/8."},
+        {"id": "q4", "intrebare": "1/6 + 1/6 + 1/6 = ?", "tip": "alegere", "optiuni": ["3/18", "1/2", "3/6", "1/3"], "raspuns_corect": "1/2", "explicatie": "1/6+1/6+1/6=3/6=1/2."},
+        {"id": "q5", "intrebare": "2/3 + 1/6 = ?", "tip": "alegere", "optiuni": ["3/9", "5/6", "3/6", "1/2"], "raspuns_corect": "5/6", "explicatie": "CMMMC(3,6)=6. 2/3=4/6. Suma: 4/6+1/6=5/6."},
+        {"id": "q6", "intrebare": "1/4 + 3/8 = ?", "tip": "alegere", "optiuni": ["4/12", "5/8", "4/8", "1/2"], "raspuns_corect": "5/8", "explicatie": "CMMMC(4,8)=8. 1/4=2/8. Suma: 2/8+3/8=5/8."},
+        {"id": "q7", "intrebare": "1 și 1/2 + 2 și 1/4 = ?", "tip": "alegere", "optiuni": ["3 și 3/4", "3 și 1/2", "4", "3 și 2/6"], "raspuns_corect": "3 și 3/4", "explicatie": "Întregi: 1+2=3. Fracții: 1/2+1/4=2/4+1/4=3/4. Rezultat: 3 și 3/4."},
+        {"id": "q8", "intrebare": "3/5 + 4/5 = ?", "tip": "alegere", "optiuni": ["7/5", "7/10", "1 și 2/5", "1 și 1/2"], "raspuns_corect": "1 și 2/5", "explicatie": "3/5+4/5=7/5=1 și 2/5 (7÷5=1 rest 2)."},
+        {"id": "q9", "intrebare": "1/3 + 1/4 + 1/12 = ?", "tip": "alegere", "optiuni": ["3/19", "7/12", "2/3", "8/12"], "raspuns_corect": "2/3", "explicatie": "CMMMC=12. 4/12+3/12+1/12=8/12=2/3."},
+        {"id": "q10", "intrebare": "Ce număr se adaugă la 3/8 pentru a obține 1?", "tip": "alegere", "optiuni": ["3/8", "5/8", "1/8", "4/8"], "raspuns_corect": "5/8", "explicatie": "1 - 3/8 = 8/8 - 3/8 = 5/8."}
+      ]
+    }
+  },
+  {
+    "id": "fractii_5",
+    "titlu": "Scăderea fracțiilor",
+    "modul": "Numere și fracții",
+    "descriere": "Înveți să scazi fracții cu același numitor și cu numitori diferiți.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "La <strong>scăderea cu același numitor</strong>, scazi numărătorii și păstrezi numitorul.<br><br>a/n - b/n = (a-b)/n<br><br>Exemplu: 5/8 - 2/8 = 3/8",
+        "intrebare": "Calculați: 7/9 - 4/9 = ?",
+        "tip": "alegere",
+        "optiuni": ["3/9", "3/0", "11/9", "1/3"],
+        "raspuns_corect": "3/9",
+        "explicatie_gresit": "Același numitor: 7-4=3, numitorul rămâne 9. Rezultat: 3/9 (sau 1/3 simplificat, dar 3/9 este și ea corectă)."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "La <strong>numitori diferiți</strong>, procedăm ca la adunare: găsim CMMMC și amplificăm.<br><br>3/4 - 1/6:<br>CMMMC(4,6)=12<br>3/4=9/12 și 1/6=2/12<br>9/12 - 2/12 = 7/12",
+        "intrebare": "Calculați: 5/6 - 1/4 = ?",
+        "tip": "alegere",
+        "optiuni": ["4/2", "4/24", "7/12", "1/2"],
+        "raspuns_corect": "7/12",
+        "explicatie_gresit": "CMMMC(6,4)=12. 5/6=10/12, 1/4=3/12. Diferența: 10/12-3/12=7/12."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Scăderea din <strong>număr întreg</strong>: transformi întregul în fracție cu același numitor.<br><br>2 - 3/4 = 8/4 - 3/4 = 5/4 = 1 și 1/4",
+        "intrebare": "Calculați: 3 - 5/8 = ?",
+        "tip": "alegere",
+        "optiuni": ["19/8", "2 și 3/8", "13/8", "2 și 5/8"],
+        "raspuns_corect": "2 și 3/8",
+        "explicatie_gresit": "3 = 24/8. 24/8 - 5/8 = 19/8 = 2 și 3/8 (19÷8=2 rest 3)."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "La <strong>scăderea numerelor mixte</strong>, scazi separat întregii și fracțiile.<br><br>3 și 3/4 - 1 și 1/4 = (3-1) și (3/4-1/4) = 2 și 2/4 = 2 și 1/2<br><br>Dacă fracția scăzătorului e mai mare, împrumuți 1 din întreg.",
+        "intrebare": "Calculați: 4 și 3/5 - 2 și 1/5 = ?",
+        "tip": "alegere",
+        "optiuni": ["2 și 2/5", "2 și 4/5", "3 și 2/5", "2 și 1/5"],
+        "raspuns_corect": "2 și 2/5",
+        "explicatie_gresit": "Întregi: 4-2=2. Fracții: 3/5-1/5=2/5. Rezultat: 2 și 2/5."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Exemplu de <strong>împrumut</strong>: 3 și 1/4 - 1 și 3/4<br>Nu putem scădea 3/4 din 1/4, deci împrumutăm 1 din 3:<br>Devine: 2 și 5/4 - 1 și 3/4 = 1 și 2/4 = 1 și 1/2",
+        "intrebare": "Calculați: 5 și 1/3 - 2 și 2/3 = ?",
+        "tip": "alegere",
+        "optiuni": ["3 și 1/3", "2 și 1/3", "2 și 2/3", "3 și 2/3"],
+        "raspuns_corect": "2 și 2/3",
+        "explicatie_gresit": "Nu putem scădea 2/3 din 1/3, deci împrumutăm: 4 și 4/3 - 2 și 2/3 = 2 și 2/3."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "5/7 - 2/7 = ?", "tip": "alegere", "optiuni": ["3/7", "3/14", "7/7", "3/0"], "raspuns_corect": "3/7", "explicatie": "5-2=3, numitorul rămâne 7."},
+        {"id": "q2", "intrebare": "3/4 - 1/2 = ?", "tip": "alegere", "optiuni": ["2/2", "1/4", "1/2", "2/6"], "raspuns_corect": "1/4", "explicatie": "CMMMC(4,2)=4. 3/4-2/4=1/4."},
+        {"id": "q3", "intrebare": "1 - 2/5 = ?", "tip": "alegere", "optiuni": ["3/5", "2/5", "1/5", "4/5"], "raspuns_corect": "3/5", "explicatie": "1=5/5. 5/5-2/5=3/5."},
+        {"id": "q4", "intrebare": "5/6 - 1/3 = ?", "tip": "alegere", "optiuni": ["4/3", "1/2", "4/6", "3/6"], "raspuns_corect": "1/2", "explicatie": "CMMMC(6,3)=6. 5/6-2/6=3/6=1/2."},
+        {"id": "q5", "intrebare": "3 și 4/5 - 1 și 2/5 = ?", "tip": "alegere", "optiuni": ["2 și 1/5", "2 și 2/5", "2 și 3/5", "1 și 2/5"], "raspuns_corect": "2 și 2/5", "explicatie": "Întregi: 3-1=2. Fracții: 4/5-2/5=2/5. Rezultat: 2 și 2/5."},
+        {"id": "q6", "intrebare": "7/8 - 3/8 = ?", "tip": "alegere", "optiuni": ["4/0", "4/16", "1/2", "4/8"], "raspuns_corect": "1/2", "explicatie": "7-3=4, numitor=8. 4/8=1/2."},
+        {"id": "q7", "intrebare": "2 - 3/4 = ?", "tip": "alegere", "optiuni": ["1 și 1/4", "1 și 3/4", "2 și 1/4", "1 și 1/2"], "raspuns_corect": "1 și 1/4", "explicatie": "2=8/4. 8/4-3/4=5/4=1 și 1/4."},
+        {"id": "q8", "intrebare": "4 și 1/6 - 2 și 5/6 = ?", "tip": "alegere", "optiuni": ["2 și 4/6", "1 și 2/6", "1 și 1/3", "2 și 1/3"], "raspuns_corect": "1 și 1/3", "explicatie": "Împrumutăm: 3 și 7/6 - 2 și 5/6 = 1 și 2/6 = 1 și 1/3."},
+        {"id": "q9", "intrebare": "9/10 - 2/5 = ?", "tip": "alegere", "optiuni": ["7/5", "1/2", "7/10", "1/10"], "raspuns_corect": "1/2", "explicatie": "CMMMC(10,5)=10. 2/5=4/10. 9/10-4/10=5/10=1/2."},
+        {"id": "q10", "intrebare": "Care este diferența dintre 1 și 3/7?", "tip": "alegere", "optiuni": ["2/7", "4/7", "3/7", "5/7"], "raspuns_corect": "4/7", "explicatie": "1-3/7=7/7-3/7=4/7."}
+      ]
+    }
+  },
+  {
+    "id": "procente_1",
+    "titlu": "Ce este procentul",
+    "modul": "Procente",
+    "descriere": "Înveți ce înseamnă un procent și cum îl vizualizezi.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "Un <strong>procent</strong> reprezintă o parte dintr-un întreg împărțit în 100 de părți egale. Simbolul % înseamnă \"din 100\".<br><br>25% = 25 din 100 = 25/100 = 1/4",
+        "intrebare": "Ce înseamnă 50%?",
+        "tip": "alegere",
+        "optiuni": ["50 din 10", "50 din 100", "5 din 100", "1 din 50"],
+        "raspuns_corect": "50 din 100",
+        "explicatie_gresit": "% înseamnă 'din 100'. Deci 50% = 50 din 100."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Relația fundamentală: <strong>procent = (parte / întreg) × 100</strong><br><br>Exemplu: Din 40 elevi, 8 au luat 10. Ce procent?<br>(8/40) × 100 = 0.2 × 100 = 20%",
+        "intrebare": "Un magazin a vândut 30 de produse din 100. Ce procent a vândut?",
+        "tip": "alegere",
+        "optiuni": ["3%", "30%", "70%", "0.3%"],
+        "raspuns_corect": "30%",
+        "explicatie_gresit": "(30/100) × 100 = 30%"
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Procente comune pe care trebuie să le știi:<br>10% = 1/10<br>25% = 1/4<br>50% = 1/2<br>75% = 3/4<br>100% = întreg",
+        "intrebare": "75% din 200 = ?",
+        "tip": "alegere",
+        "optiuni": ["75", "100", "150", "175"],
+        "raspuns_corect": "150",
+        "explicatie_gresit": "75% = 3/4. 3/4 × 200 = 150. Sau: 75/100 × 200 = 150."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Calculul procentului dintr-un număr:<br><strong>parte = procent% × întreg / 100</strong><br><br>Exemplu: 20% din 350 = 20 × 350 / 100 = 70",
+        "intrebare": "Cât este 15% din 80?",
+        "tip": "alegere",
+        "optiuni": ["12", "15", "8", "10"],
+        "raspuns_corect": "12",
+        "explicatie_gresit": "15% din 80 = 15 × 80 / 100 = 1200/100 = 12."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Procentele pot fi și mai mari de 100%.<br>Exemplu: vânzările au crescut cu 150% → au crescut la 2.5× față de original.<br><br>200% = dublul. 300% = triplul.",
+        "intrebare": "Dacă prețul unui produs a crescut cu 100%, care este noul preț față de cel original?",
+        "tip": "alegere",
+        "optiuni": ["Același", "Dublul", "Triplul", "Jumătatea"],
+        "raspuns_corect": "Dublul",
+        "explicatie_gresit": "O creștere de 100% înseamnă că adaugi 100% din preț → noul preț = preț original + 100% × preț = 2 × preț = dublul."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "Ce procent este 50 din 200?", "tip": "alegere", "optiuni": ["50%", "25%", "10%", "5%"], "raspuns_corect": "25%", "explicatie": "(50/200)×100 = 25%."},
+        {"id": "q2", "intrebare": "Cât este 10% din 350?", "tip": "alegere", "optiuni": ["35", "10", "3.5", "350"], "raspuns_corect": "35", "explicatie": "10% din 350 = 350/10 = 35."},
+        {"id": "q3", "intrebare": "Ce fracție reprezintă 25%?", "tip": "alegere", "optiuni": ["1/2", "1/5", "1/4", "1/3"], "raspuns_corect": "1/4", "explicatie": "25% = 25/100 = 1/4."},
+        {"id": "q4", "intrebare": "Cât este 50% din 84?", "tip": "alegere", "optiuni": ["42", "84", "50", "34"], "raspuns_corect": "42", "explicatie": "50% = jumătate. 84/2 = 42."},
+        {"id": "q5", "intrebare": "Într-o clasă de 30 elevi, 6 au luat nota 10. Ce procent?", "tip": "alegere", "optiuni": ["6%", "20%", "30%", "60%"], "raspuns_corect": "20%", "explicatie": "(6/30)×100 = 20%."},
+        {"id": "q6", "intrebare": "Cât este 1% din 500?", "tip": "alegere", "optiuni": ["50", "5", "0.5", "1"], "raspuns_corect": "5", "explicatie": "1% din 500 = 500/100 = 5."},
+        {"id": "q7", "intrebare": "Dacă ai 200 lei și cheltuiești 25%, cât ai cheltuit?", "tip": "alegere", "optiuni": ["25 lei", "50 lei", "75 lei", "100 lei"], "raspuns_corect": "50 lei", "explicatie": "25% din 200 = 200/4 = 50 lei."},
+        {"id": "q8", "intrebare": "100% din orice număr este egal cu?", "tip": "alegere", "optiuni": ["100", "1", "Numărul însuși", "Dublu"], "raspuns_corect": "Numărul însuși", "explicatie": "100% = tot = numărul însuși. 100% din x = x."},
+        {"id": "q9", "intrebare": "Cât este 75% din 40?", "tip": "alegere", "optiuni": ["10", "20", "30", "35"], "raspuns_corect": "30", "explicatie": "75% din 40 = 3/4 × 40 = 30."},
+        {"id": "q10", "intrebare": "0% din orice număr este egal cu?", "tip": "alegere", "optiuni": ["1", "100", "Numărul însuși", "0"], "raspuns_corect": "0", "explicatie": "0% = nimic. 0% din orice număr = 0."}
+      ]
+    }
+  },
+  {
+    "id": "procente_2",
+    "titlu": "Transformări: fracții și procente",
+    "modul": "Procente",
+    "descriere": "Înveți să transformi fracțiile în procente și invers.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "Fracție → Procent: <strong>împarte și înmulțește cu 100</strong>.<br><br>3/4 = 3 ÷ 4 × 100 = 0.75 × 100 = 75%<br>1/5 = 1 ÷ 5 × 100 = 0.20 × 100 = 20%",
+        "intrebare": "Cât este 2/5 ca procent?",
+        "tip": "alegere",
+        "optiuni": ["25%", "40%", "20%", "50%"],
+        "raspuns_corect": "40%",
+        "explicatie_gresit": "2/5 = 2÷5×100 = 0.4×100 = 40%."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Procent → Fracție: <strong>scrie peste 100 și simplifică</strong>.<br><br>60% = 60/100 = 3/5<br>45% = 45/100 = 9/20",
+        "intrebare": "Transformă 80% în fracție simplificată.",
+        "tip": "alegere",
+        "optiuni": ["80/10", "8/10", "4/5", "2/3"],
+        "raspuns_corect": "4/5",
+        "explicatie_gresit": "80% = 80/100. CMMDC(80,100)=20. 80÷20=4, 100÷20=5. Deci 4/5."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Fracții cu numitor 10, 100, 1000 se convertesc ușor:<br>3/10 = 30%<br>7/100 = 7%<br>Altele: amplificăm la numitor 100.<br>3/4 = 75/100 = 75%",
+        "intrebare": "Cât este 7/20 ca procent?",
+        "tip": "alegere",
+        "optiuni": ["7%", "14%", "35%", "70%"],
+        "raspuns_corect": "35%",
+        "explicatie_gresit": "7/20 = (7×5)/(20×5) = 35/100 = 35%."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Zecimalele se transformă în procente înmulțind cu 100:<br>0.35 = 35%<br>0.07 = 7%<br>1.5 = 150%<br><br>Și invers: 42% = 0.42",
+        "intrebare": "0.125 este egal cu ce procent?",
+        "tip": "alegere",
+        "optiuni": ["1.25%", "12.5%", "125%", "0.125%"],
+        "raspuns_corect": "12.5%",
+        "explicatie_gresit": "0.125 × 100 = 12.5%."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Rezumat transformări:<br>Fracție → % : × 100<br>% → Fracție : /100 și simplifică<br>Zecimal → % : × 100<br>% → Zecimal : /100",
+        "intrebare": "Transformă 35% în fracție simplificată.",
+        "tip": "alegere",
+        "optiuni": ["35/10", "7/20", "7/10", "3/5"],
+        "raspuns_corect": "7/20",
+        "explicatie_gresit": "35% = 35/100. CMMDC(35,100)=5. 35÷5=7, 100÷5=20. Deci 7/20."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "1/4 = ?%", "tip": "alegere", "optiuni": ["4%", "25%", "40%", "14%"], "raspuns_corect": "25%", "explicatie": "1/4 = 0.25 = 25%."},
+        {"id": "q2", "intrebare": "50% = ?", "tip": "alegere", "optiuni": ["1/5", "5/10", "1/2", "2/5"], "raspuns_corect": "1/2", "explicatie": "50% = 50/100 = 1/2."},
+        {"id": "q3", "intrebare": "3/5 = ?%", "tip": "alegere", "optiuni": ["30%", "35%", "60%", "15%"], "raspuns_corect": "60%", "explicatie": "3/5 = 3÷5×100 = 60%."},
+        {"id": "q4", "intrebare": "20% = ?", "tip": "alegere", "optiuni": ["2/10", "1/5", "1/4", "20/10"], "raspuns_corect": "1/5", "explicatie": "20% = 20/100 = 1/5."},
+        {"id": "q5", "intrebare": "0.75 = ?%", "tip": "alegere", "optiuni": ["7.5%", "0.75%", "750%", "75%"], "raspuns_corect": "75%", "explicatie": "0.75 × 100 = 75%."},
+        {"id": "q6", "intrebare": "3/8 = ?%", "tip": "alegere", "optiuni": ["38%", "37.5%", "30%", "35%"], "raspuns_corect": "37.5%", "explicatie": "3/8 = 3÷8×100 = 0.375×100 = 37.5%."},
+        {"id": "q7", "intrebare": "66% ≈ ?", "tip": "alegere", "optiuni": ["2/3", "3/4", "1/2", "3/5"], "raspuns_corect": "2/3", "explicatie": "2/3 ≈ 66.67% ≈ 66%."},
+        {"id": "q8", "intrebare": "Transformă 125% în număr mixt.", "tip": "alegere", "optiuni": ["1 și 1/4", "1 și 3/4", "1 și 1/2", "2 și 1/4"], "raspuns_corect": "1 și 1/4", "explicatie": "125% = 125/100 = 5/4 = 1 și 1/4."},
+        {"id": "q9", "intrebare": "9/25 = ?%", "tip": "alegere", "optiuni": ["9%", "25%", "36%", "45%"], "raspuns_corect": "36%", "explicatie": "9/25 = (9×4)/(25×4) = 36/100 = 36%."},
+        {"id": "q10", "intrebare": "Care fracție echivalează cu 40%?", "tip": "alegere", "optiuni": ["4/10", "2/5", "40/10", "Ambele a și b"], "raspuns_corect": "Ambele a și b", "explicatie": "4/10=2/5=40%. Ambele sunt corecte (echivalente)."}
+      ]
+    }
+  },
+  {
+    "id": "procente_3",
+    "titlu": "Probleme cu procente",
+    "modul": "Procente",
+    "descriere": "Aplici cunoștințele despre procente pentru a rezolva probleme reale.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "Formula de bază: <strong>Parte = Procent% × Întreg</strong><br><br>Tipuri de probleme:<br>1. Aflați X% din N (calculezi partea)<br>2. X este ce procent din N (calculezi procentul)<br>3. X este Y% din ? (calculezi întregul)",
+        "intrebare": "Un tricou costă 120 lei și are o reducere de 30%. Cât este reducerea în lei?",
+        "tip": "alegere",
+        "optiuni": ["30 lei", "36 lei", "40 lei", "84 lei"],
+        "raspuns_corect": "36 lei",
+        "explicatie_gresit": "Reducerea = 30% din 120 = 30×120/100 = 36 lei."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Calculul procentului: <strong>Procent = (Parte / Întreg) × 100</strong><br><br>Exemplu: Un elev a rezolvat 18 din 24 exerciții. Ce procent?<br>(18/24) × 100 = 75%",
+        "intrebare": "Dintr-un test cu 20 întrebări, un elev a răspuns corect la 17. Ce procent a obținut?",
+        "tip": "alegere",
+        "optiuni": ["75%", "80%", "85%", "90%"],
+        "raspuns_corect": "85%",
+        "explicatie_gresit": "(17/20) × 100 = 85%."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Calculul întregului: <strong>Întreg = Parte / Procent × 100</strong><br><br>Exemplu: 15 reprezintă 25% din ce număr?<br>Întreg = 15 / 25 × 100 = 60",
+        "intrebare": "40 elevi reprezintă 80% din elevii clasei. Câți elevi are clasa?",
+        "tip": "alegere",
+        "optiuni": ["45", "48", "50", "52"],
+        "raspuns_corect": "50",
+        "explicatie_gresit": "Întreg = 40/80×100 = 50 elevi."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Prețul după reducere: <strong>Preț nou = Preț original × (100 - reducere%) / 100</strong><br><br>Exemplu: Preț 200 lei, reducere 15%:<br>Preț nou = 200 × 85/100 = 170 lei",
+        "intrebare": "Un laptop costă 3000 lei. Are o reducere de 20%. Cât costă după reducere?",
+        "tip": "alegere",
+        "optiuni": ["2400 lei", "2500 lei", "2600 lei", "600 lei"],
+        "raspuns_corect": "2400 lei",
+        "explicatie_gresit": "Preț nou = 3000 × 80/100 = 2400 lei. (sau 3000 - 20%×3000 = 3000-600 = 2400)"
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Creștere procentuală: <strong>Preț nou = Preț original × (100 + creștere%) / 100</strong><br><br>Exemplu: Salariu 2000 lei, crește cu 12%:<br>Salariu nou = 2000 × 112/100 = 2240 lei",
+        "intrebare": "Un produs costă 500 lei și prețul crește cu 10%. Care este noul preț?",
+        "tip": "alegere",
+        "optiuni": ["510 lei", "550 lei", "505 lei", "560 lei"],
+        "raspuns_corect": "550 lei",
+        "explicatie_gresit": "Preț nou = 500 × 110/100 = 550 lei. (sau 500 + 10%×500 = 500+50 = 550)"
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "Cât este 20% din 450?", "tip": "alegere", "optiuni": ["45", "90", "40", "80"], "raspuns_corect": "90", "explicatie": "20% din 450 = 450×20/100 = 90."},
+        {"id": "q2", "intrebare": "15 este ce procent din 60?", "tip": "alegere", "optiuni": ["15%", "20%", "25%", "30%"], "raspuns_corect": "25%", "explicatie": "(15/60)×100 = 25%."},
+        {"id": "q3", "intrebare": "60 reprezintă 40% din ce număr?", "tip": "alegere", "optiuni": ["100", "120", "150", "160"], "raspuns_corect": "150", "explicatie": "60/40×100 = 150."},
+        {"id": "q4", "intrebare": "Un telefon de 800 lei are reducere 25%. Cât costă acum?", "tip": "alegere", "optiuni": ["575 lei", "600 lei", "625 lei", "650 lei"], "raspuns_corect": "600 lei", "explicatie": "800×75/100 = 600 lei."},
+        {"id": "q5", "intrebare": "Salariul de 1800 lei crește cu 15%. Care este noul salariu?", "tip": "alegere", "optiuni": ["1950 lei", "2050 lei", "2070 lei", "2100 lei"], "raspuns_corect": "2070 lei", "explicatie": "1800×115/100 = 2070 lei."},
+        {"id": "q6", "intrebare": "Un elev a rezolvat 14 din 20 probleme. Ce procent reprezintă?", "tip": "alegere", "optiuni": ["60%", "65%", "70%", "75%"], "raspuns_corect": "70%", "explicatie": "(14/20)×100 = 70%."},
+        {"id": "q7", "intrebare": "TVA este 19%. Un produs costă 100 lei fără TVA. Cât costă cu TVA?", "tip": "alegere", "optiuni": ["109 lei", "119 lei", "129 lei", "190 lei"], "raspuns_corect": "119 lei", "explicatie": "100×119/100 = 119 lei."},
+        {"id": "q8", "intrebare": "Dintr-un lot de 200 produse, 5% sunt defecte. Câte produse defecte sunt?", "tip": "alegere", "optiuni": ["5", "10", "15", "20"], "raspuns_corect": "10", "explicatie": "5% din 200 = 10 produse defecte."},
+        {"id": "q9", "intrebare": "36 este 90% din ce număr?", "tip": "alegere", "optiuni": ["32", "36", "40", "45"], "raspuns_corect": "40", "explicatie": "36/90×100 = 40."},
+        {"id": "q10", "intrebare": "Un magazin vinde 120 produse, cu 20% mai mult față de luna trecută. Câte a vândut luna trecută?", "tip": "alegere", "optiuni": ["96", "100", "102", "104"], "raspuns_corect": "100", "explicatie": "Luna trecută × 120% = 120. Deci luna trecută = 120/1.2 = 100."}
+      ]
+    }
+  },
+  {
+    "id": "ecuatii_1",
+    "titlu": "Ecuații simple (ax + b = c)",
+    "modul": "Ecuații",
+    "descriere": "Înveți să rezolvi ecuații liniare simple de forma ax + b = c.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "O <strong>ecuație</strong> este o egalitate în care există cel puțin o necunoscută (x).<br><br>ax + b = c<br>Scopul: găsim valoarea lui x care face ecuația adevărată.<br><br>Exemplu: x + 3 = 7 → x = 4",
+        "intrebare": "Ce valoare a lui x face adevărată ecuația: x + 5 = 12?",
+        "tip": "alegere",
+        "optiuni": ["5", "6", "7", "8"],
+        "raspuns_corect": "7",
+        "explicatie_gresit": "x + 5 = 12 → x = 12 - 5 = 7. Verificare: 7+5=12 ✓"
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Principiul rezolvării: <strong>efectuezi aceeași operație în ambele membre</strong> pentru a izola x.<br><br>x + b = c → x = c - b (scazi b din ambele membre)<br>x - b = c → x = c + b (aduni b la ambele membre)",
+        "intrebare": "Rezolvă: x - 4 = 9",
+        "tip": "alegere",
+        "optiuni": ["5", "13", "4", "36"],
+        "raspuns_corect": "13",
+        "explicatie_gresit": "x - 4 = 9 → x = 9 + 4 = 13. Verificare: 13-4=9 ✓"
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Dacă x este înmulțit: <strong>împarți ambele membre la coeficient</strong>.<br><br>3x = 15 → x = 15/3 = 5<br>2x = 7 → x = 7/2 = 3.5",
+        "intrebare": "Rezolvă: 4x = 20",
+        "tip": "alegere",
+        "optiuni": ["4", "5", "16", "80"],
+        "raspuns_corect": "5",
+        "explicatie_gresit": "4x = 20 → x = 20/4 = 5. Verificare: 4×5=20 ✓"
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Ecuație completă: <strong>ax + b = c</strong><br>Pași:<br>1. Mută b în dreapta: ax = c - b<br>2. Împarte la a: x = (c-b)/a<br><br>Exemplu: 2x + 3 = 11<br>2x = 11-3 = 8<br>x = 8/2 = 4",
+        "intrebare": "Rezolvă: 3x + 2 = 14",
+        "tip": "alegere",
+        "optiuni": ["3", "4", "5", "6"],
+        "raspuns_corect": "4",
+        "explicatie_gresit": "3x = 14-2 = 12 → x = 12/3 = 4. Verificare: 3×4+2=14 ✓"
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Coeficienți negativi: funcționează la fel.<br><br>-2x + 6 = 2<br>-2x = 2-6 = -4<br>x = (-4)/(-2) = 2<br><br>Atenție: împărțind la număr negativ, semnul rămâne corect!",
+        "intrebare": "Rezolvă: 5x - 3 = 22",
+        "tip": "alegere",
+        "optiuni": ["4", "5", "6", "7"],
+        "raspuns_corect": "5",
+        "explicatie_gresit": "5x = 22+3 = 25 → x = 25/5 = 5. Verificare: 5×5-3=22 ✓"
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "Rezolvă: x + 8 = 15", "tip": "alegere", "optiuni": ["6", "7", "8", "23"], "raspuns_corect": "7", "explicatie": "x = 15-8 = 7."},
+        {"id": "q2", "intrebare": "Rezolvă: 2x = 18", "tip": "alegere", "optiuni": ["7", "8", "9", "16"], "raspuns_corect": "9", "explicatie": "x = 18/2 = 9."},
+        {"id": "q3", "intrebare": "Rezolvă: x - 7 = 3", "tip": "alegere", "optiuni": ["4", "7", "10", "21"], "raspuns_corect": "10", "explicatie": "x = 3+7 = 10."},
+        {"id": "q4", "intrebare": "Rezolvă: 3x + 1 = 10", "tip": "alegere", "optiuni": ["2", "3", "4", "5"], "raspuns_corect": "3", "explicatie": "3x = 9 → x = 3."},
+        {"id": "q5", "intrebare": "Rezolvă: 4x - 8 = 0", "tip": "alegere", "optiuni": ["0", "1", "2", "4"], "raspuns_corect": "2", "explicatie": "4x = 8 → x = 2."},
+        {"id": "q6", "intrebare": "Rezolvă: 5x + 10 = 35", "tip": "alegere", "optiuni": ["3", "4", "5", "6"], "raspuns_corect": "5", "explicatie": "5x = 25 → x = 5."},
+        {"id": "q7", "intrebare": "Verificare: x=3 satisface 2x + 4 = 10?", "tip": "alegere", "optiuni": ["Da", "Nu", "Parțial", "Nu se poate verifica"], "raspuns_corect": "Da", "explicatie": "2×3+4 = 6+4 = 10 ✓"},
+        {"id": "q8", "intrebare": "Rezolvă: 7x = 49", "tip": "alegere", "optiuni": ["6", "7", "8", "42"], "raspuns_corect": "7", "explicatie": "x = 49/7 = 7."},
+        {"id": "q9", "intrebare": "Rezolvă: x/2 = 6", "tip": "alegere", "optiuni": ["3", "6", "8", "12"], "raspuns_corect": "12", "explicatie": "x = 6×2 = 12."},
+        {"id": "q10", "intrebare": "Rezolvă: 2x + 5 = 1", "tip": "alegere", "optiuni": ["-3", "-2", "2", "3"], "raspuns_corect": "-2", "explicatie": "2x = 1-5 = -4 → x = -4/2 = -2."}
+      ]
+    }
+  },
+  {
+    "id": "ecuatii_2",
+    "titlu": "Probleme cu ecuații",
+    "modul": "Ecuații",
+    "descriere": "Înveți să transformi probleme din text în ecuații și să le rezolvi.",
+    "pasi": [
+      {
+        "id": "pas1",
+        "explicatie": "Pașii pentru a rezolva o problemă cu ecuații:<br>1. Identifică necunoscuta și noteaz-o cu x<br>2. Scrie ecuația din enunț<br>3. Rezolvă ecuația<br>4. Verifică și formulează răspunsul",
+        "intrebare": "Un număr mărit cu 7 dă 19. Care este numărul?",
+        "tip": "alegere",
+        "optiuni": ["10", "11", "12", "13"],
+        "raspuns_corect": "12",
+        "explicatie_gresit": "Fie numărul x. Ecuația: x + 7 = 19 → x = 12."
+      },
+      {
+        "id": "pas2",
+        "explicatie": "Probleme cu vârstă: <strong>identifică relațiile</strong> dintre vârste.<br><br>Exemplu: Ana are de 3 ori vârsta lui Mihai. Suma vârstelor este 24. Câți ani are Mihai?<br>Mihai = x, Ana = 3x<br>x + 3x = 24 → 4x = 24 → x = 6",
+        "intrebare": "Tatăl are de 4 ori vârsta fiului. Suma vârstelor este 40. Câți ani are fiul?",
+        "tip": "alegere",
+        "optiuni": ["6", "7", "8", "10"],
+        "raspuns_corect": "8",
+        "explicatie_gresit": "Fiu=x, tată=4x. x+4x=40 → 5x=40 → x=8."
+      },
+      {
+        "id": "pas3",
+        "explicatie": "Probleme cu bani: <strong>suma totală = prețuri × cantități</strong>.<br><br>Exemplu: O carte costă 25 lei mai mult decât un caiet. Împreună costă 45 lei. Cât costă caietul?<br>Caiet=x, carte=x+25<br>x+(x+25)=45 → 2x+25=45 → 2x=20 → x=10",
+        "intrebare": "Un stilou costă 12 lei mai mult decât un creion. Împreună costă 18 lei. Cât costă creioanele?",
+        "tip": "alegere",
+        "optiuni": ["2 lei", "3 lei", "4 lei", "6 lei"],
+        "raspuns_corect": "3 lei",
+        "explicatie_gresit": "Creion=x, stilou=x+12. x+(x+12)=18 → 2x=6 → x=3."
+      },
+      {
+        "id": "pas4",
+        "explicatie": "Probleme cu drum: <strong>distanță = viteză × timp</strong>.<br><br>Exemplu: Un tren parcurge 120 km în 2 ore. Cu ce viteză merge?<br>v = 120/2 = 60 km/h<br><br>Dacă trebuie să afle distanța: d = v×t",
+        "intrebare": "O mașină merge cu 80 km/h. Cât timp îi ia să parcurgă 240 km?",
+        "tip": "alegere",
+        "optiuni": ["2 ore", "2.5 ore", "3 ore", "4 ore"],
+        "raspuns_corect": "3 ore",
+        "explicatie_gresit": "t = d/v = 240/80 = 3 ore."
+      },
+      {
+        "id": "pas5",
+        "explicatie": "Probleme cu numere consecutive: numere consecutive sunt x, x+1, x+2...<br><br>Suma a 3 numere consecutive este 36. Care sunt numerele?<br>x+(x+1)+(x+2)=36 → 3x+3=36 → 3x=33 → x=11<br>Numerele: 11, 12, 13",
+        "intrebare": "Suma a două numere consecutive este 29. Care este cel mai mic?",
+        "tip": "alegere",
+        "optiuni": ["13", "14", "15", "16"],
+        "raspuns_corect": "14",
+        "explicatie_gresit": "x+(x+1)=29 → 2x+1=29 → 2x=28 → x=14. Numerele: 14 și 15."
+      }
+    ],
+    "test": {
+      "intrebari": [
+        {"id": "q1", "intrebare": "Un număr scăzut cu 5 dă 13. Ce număr este?", "tip": "alegere", "optiuni": ["8", "16", "18", "20"], "raspuns_corect": "18", "explicatie": "x-5=13 → x=18."},
+        {"id": "q2", "intrebare": "De 3 ori un număr este 45. Ce număr este?", "tip": "alegere", "optiuni": ["12", "13", "14", "15"], "raspuns_corect": "15", "explicatie": "3x=45 → x=15."},
+        {"id": "q3", "intrebare": "Mama are de 3 ori vârsta copilului. Împreună au 48 de ani. Câți ani are copilul?", "tip": "alegere", "optiuni": ["10", "12", "14", "16"], "raspuns_corect": "12", "explicatie": "x+3x=48 → 4x=48 → x=12."},
+        {"id": "q4", "intrebare": "O carte costă 35 lei, cu 15 lei mai mult decât un caiet. Cât costă caietul?", "tip": "alegere", "optiuni": ["15 lei", "20 lei", "25 lei", "50 lei"], "raspuns_corect": "20 lei", "explicatie": "x+15=35 → x=20 lei."},
+        {"id": "q5", "intrebare": "Suma a 3 numere consecutive este 54. Care este cel mai mare?", "tip": "alegere", "optiuni": ["16", "17", "18", "19"], "raspuns_corect": "19", "explicatie": "x+(x+1)+(x+2)=54 → 3x+3=54 → x=17. Cel mai mare: 17+2=19."},
+        {"id": "q6", "intrebare": "Un biciclist parcurge 60 km în 3 ore. Cu ce viteză merge?", "tip": "alegere", "optiuni": ["15 km/h", "18 km/h", "20 km/h", "25 km/h"], "raspuns_corect": "20 km/h", "explicatie": "v = 60/3 = 20 km/h."},
+        {"id": "q7", "intrebare": "Dacă adaugi 8 la dublul unui număr, obții 24. Ce număr este?", "tip": "alegere", "optiuni": ["6", "7", "8", "16"], "raspuns_corect": "8", "explicatie": "2x+8=24 → 2x=16 → x=8."},
+        {"id": "q8", "intrebare": "Avem 120 lei de împărțit în 4 părți egale. Cât este o parte?", "tip": "alegere", "optiuni": ["24 lei", "28 lei", "30 lei", "40 lei"], "raspuns_corect": "30 lei", "explicatie": "4x=120 → x=30 lei."},
+        {"id": "q9", "intrebare": "Ion are 6 ani mai mult decât Ana. Împreună au 30 de ani. Câți ani are Ana?", "tip": "alegere", "optiuni": ["10", "12", "14", "16"], "raspuns_corect": "12", "explicatie": "x+(x+6)=30 → 2x+6=30 → 2x=24 → x=12."},
+        {"id": "q10", "intrebare": "Un tren parcurge 300 km cu viteza de 75 km/h. Cât durează călătoria?", "tip": "alegere", "optiuni": ["3 ore", "3.5 ore", "4 ore", "5 ore"], "raspuns_corect": "4 ore", "explicatie": "t = 300/75 = 4 ore."}
+      ]
+    }
+  }
+]

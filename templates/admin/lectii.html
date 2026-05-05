@@ -1,0 +1,38 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Lecții – Admin Mathly{% endblock %}
+
+{% block content %}
+<div class="admin-page-header">
+  <h1>Lecții</h1>
+  <p>Editează conținutul lecțiilor direct din interfață.</p>
+</div>
+
+<div class="admin-card">
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Titlu</th>
+        <th>Modul</th>
+        <th>Pași</th>
+        <th>Întrebări test</th>
+        <th>Acțiuni</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for l in lectii %}
+      <tr>
+        <td><code>{{ l.id }}</code></td>
+        <td>{{ l.titlu }}</td>
+        <td><span class="modul-badge">{{ l.modul }}</span></td>
+        <td>{{ l.pasi | length }}</td>
+        <td>{{ l.test.intrebari | length }}</td>
+        <td>
+          <a href="{{ url_for('admin_edit_lectie', lectie_id=l.id) }}" class="btn btn-sm btn-outline">✏️ Editează</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

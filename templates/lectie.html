@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}{{ lectie.titlu }} – Mathly{% endblock %}
+{% block body_class %}app-body{% endblock %}
+
+{% block content %}
+<div class="app-container lesson-container">
+
+  <!-- Header lecție -->
+  <div class="lesson-header">
+    <a href="{{ url_for('dashboard') }}" class="back-link">← Dashboard</a>
+    <div class="lesson-meta">
+      <span class="lesson-module-badge">{{ lectie.modul }}</span>
+      <h1 class="lesson-title">{{ lectie.titlu }}</h1>
+    </div>
+    <div class="lesson-progress-bar-wrap">
+      <div class="lesson-progress-label">Pasul {{ pas_idx + 1 }} din {{ total_pasi }}</div>
+      <div class="lesson-progress-track">
+        <div class="lesson-progress-fill" style="width: {{ ((pas_idx) / total_pasi * 100) | int }}%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Card pas -->
+  <div class="step-card">
+    <div class="step-num-badge">Pasul {{ pas_idx + 1 }}</div>
+
+    <!-- Explicație -->
+    <div class="step-explanation">
+      {{ pas.explicatie | safe }}
+    </div>
+
+    <!-- Mesaj greșit -->
+    {% if eroare %}
+    <div class="error-box">
+      <div class="error-icon">❌</div>
+      <div>
+        <strong>Răspuns incorect.</strong><br>
+        {{ eroare }}
+      </div>
+    </div>
+    {% endif %}
+
+    <!-- Întrebare -->
+    <div class="step-question-section">
+      <div class="step-question-label">💬 Întrebare</div>
+      <div class="step-question">{{ pas.intrebare }}</div>
+
+      <form method="POST" action="{{ url_for('submit_pas', lectie_id=lectie.id, pas_id=pas.id) }}" class="answer-form">
+        {% if pas.tip == 'alegere' %}
+        <div class="options-grid">
+          {% for opt in pas.optiuni %}
+          <label class="option-label {% if eroare and opt == pas.raspuns_corect %}option-hint{% endif %}">
+            <input type="radio" name="raspuns" value="{{ opt }}" required>
+            <span class="option-text">{{ opt }}</span>
+          </label>
+          {% endfor %}
+        </div>
+        {% else %}
+        <div class="text-answer">
+          <input type="text" name="raspuns" placeholder="Scrie răspunsul tău..." required class="text-input">
+        </div>
+        {% endif %}
+
+        <button type="submit" class="btn btn-primary btn-submit">
+          Verifică răspunsul →
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Pași completați (indicator) -->
+  <div class="steps-dots">
+    {% for p in lectie.pasi %}
+    <div class="step-dot {% if loop.index0 < pas_idx %}dot-done{% elif loop.index0 == pas_idx %}dot-current{% else %}dot-pending{% endif %}"></div>
+    {% endfor %}
+    <div class="step-dot dot-test">T</div>
+  </div>
+
+</div>
+{% endblock %}

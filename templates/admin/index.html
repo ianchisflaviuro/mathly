@@ -1,0 +1,62 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Admin Dashboard – Mathly{% endblock %}
+
+{% block content %}
+<div class="admin-page-header">
+  <h1>Prezentare generală</h1>
+  <p>Starea platformei și progresul elevilor.</p>
+</div>
+
+<div class="admin-stats-grid">
+  <div class="admin-stat-card">
+    <div class="admin-stat-num">{{ stats | length }}</div>
+    <div class="admin-stat-label">Elevi activi</div>
+  </div>
+  <div class="admin-stat-card">
+    <div class="admin-stat-num">{{ total_lectii }}</div>
+    <div class="admin-stat-label">Lecții totale</div>
+  </div>
+  <div class="admin-stat-card">
+    <div class="admin-stat-num">
+      {% set total_complete = stats | sum(attribute='complete') %}
+      {{ total_complete }}
+    </div>
+    <div class="admin-stat-label">Lecții completate (total)</div>
+  </div>
+</div>
+
+<div class="admin-card">
+  <h2 class="admin-card-title">Progres pe elevi</h2>
+  {% if stats %}
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>Utilizator</th>
+        <th>Lecții complete</th>
+        <th>Progres</th>
+        <th>Acțiuni</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for s in stats %}
+      <tr>
+        <td><strong>{{ s.username }}</strong></td>
+        <td>{{ s.complete }} / {{ s.total }}</td>
+        <td>
+          <div class="admin-progress-track">
+            <div class="admin-progress-fill" style="width: {{ (s.complete / s.total * 100) | int if s.total > 0 else 0 }}%"></div>
+          </div>
+          <small>{{ (s.complete / s.total * 100) | int if s.total > 0 else 0 }}%</small>
+        </td>
+        <td>
+          <a href="{{ url_for('admin_progres') }}#{{ s.username }}" class="btn btn-sm btn-outline">Detalii</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="admin-empty">Nu există elevi înregistrați.</p>
+  {% endif %}
+</div>
+{% endblock %}

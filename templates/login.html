@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Login – Mathly{% endblock %}
+{% block body_class %}auth-body{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+  <div class="auth-card">
+    <a href="{{ url_for('index') }}" class="auth-logo">🧮 Mathly</a>
+    <h1 class="auth-title">Intră în cont</h1>
+    <p class="auth-subtitle">Continuă lecțiile de unde ai rămas.</p>
+
+    <form method="POST" action="{{ url_for('login') }}" class="auth-form">
+      <div class="form-group">
+        <label for="username">Utilizator</label>
+        <input type="text" id="username" name="username" placeholder="ex: elev1" required autocomplete="username">
+      </div>
+      <div class="form-group">
+        <label for="parola">Parolă</label>
+        <input type="password" id="parola" name="parola" placeholder="Parola ta" required autocomplete="current-password">
+      </div>
+      <button type="submit" class="btn btn-primary btn-full">Intră →</button>
+    </form>
+
+    <div class="auth-footer">
+      <p>Nu ai cont? <a href="https://wa.me/40700000000?text=Vreau+acces+la+Mathly" target="_blank">Solicită pe WhatsApp 👉</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
