@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% block title %}Test Final – {{ lectie.titlu }} – Mathly{% endblock %}
+{% block body_class %}app-body{% endblock %}
+
+{% block content %}
+<div class="app-container lesson-container">
+
+  <div class="lesson-header">
+    <a href="{{ url_for('dashboard') }}" class="back-link">← Dashboard</a>
+    <div class="lesson-meta">
+      <span class="lesson-module-badge">{{ lectie.modul }}</span>
+      <h1 class="lesson-title">Test Final: {{ lectie.titlu }}</h1>
+    </div>
+  </div>
+
+  <div class="test-intro-card">
+    <div class="test-intro-icon">📝</div>
+    <h2>Ești pregătit?</h2>
+    <ul class="test-rules">
+      <li>📋 <strong>10 întrebări</strong> din materia lecției</li>
+      <li>⚠️ <strong>Un singur submit</strong> – nu poți reveni</li>
+      <li>📊 Vei vedea <strong>scorul și explicațiile</strong> după</li>
+    </ul>
+  </div>
+
+  <form method="POST" action="{{ url_for('submit_test', lectie_id=lectie.id) }}" id="test-form">
+    {% for q in lectie.test.intrebari %}
+    <div class="test-question-card" id="q{{ loop.index }}">
+      <div class="test-q-num">Întrebarea {{ loop.index }}</div>
+      <div class="test-q-text">{{ q.intrebare }}</div>
+      <div class="options-grid">
+        {% for opt in q.optiuni %}
+        <label class="option-label">
+          <input type="radio" name="q_{{ q.id }}" value="{{ opt }}" required>
+          <span class="option-text">{{ opt }}</span>
+        </label>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="test-submit-area">
+      <div class="test-warning">
+        ⚠️ Odată ce trimiți, nu mai poți modifica răspunsurile.
+      </div>
+      <button type="button" class="btn btn-primary btn-lg" id="submit-btn" onclick="confirmSubmit()">
+        Trimite testul →
+      </button>
+    </div>
+  </form>
+
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function confirmSubmit() {
+  const radios = document.querySelectorAll('input[type="radio"]:checked');
+  const total = {{ lectie.test.intrebari | length }};
+
+  if (radios.length < total) {
+    const unanswered = total - radios.length;
+    alert(`Ai ${unanswered} întrebare(i) fără răspuns. Te rog răspunde la toate.`);
+    return;
+  }
+
+  if (confirm('Ești sigur că vrei să trimiți testul? Nu vei mai putea modifica răspunsurile.')) {
+    document.getElementById('test-form').submit();
+  }
+}
+
+// Progress indicator
+const questions = document.querySelectorAll('.test-question-card');
+questions.forEach((card, i) => {
+  const inputs = card.querySelectorAll('input[type="radio"]');
+  inputs.forEach(inp => {
+    inp.addEventListener('change', () => {
+      card.classList.add('answered');
+    });
+  });
+});
+</script>
+{% endblock %}

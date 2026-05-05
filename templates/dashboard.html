@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Dashboard – Mathly{% endblock %}
+{% block body_class %}app-body{% endblock %}
+
+{% block content %}
+<div class="app-container">
+  <div class="dashboard-header">
+    <div>
+      <h1 class="dashboard-title">Bună, {{ session.nume }}! 👋</h1>
+      <p class="dashboard-subtitle">Continuă de unde ai rămas.</p>
+    </div>
+    <div class="dashboard-stats">
+      <div class="stat-box">
+        <div class="stat-num">{{ complete }}</div>
+        <div class="stat-label">Complete</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">{{ in_progres }}</div>
+        <div class="stat-label">În progres</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">{{ total }}</div>
+        <div class="stat-label">Total lecții</div>
+      </div>
+    </div>
+  </div>
+
+  {% for modul_name, lectii in module.items() %}
+  <div class="module-section">
+    <h2 class="module-title">📘 {{ modul_name }}</h2>
+    <div class="lectii-grid">
+      {% for l in lectii %}
+      <div class="lectie-card lectie-{{ l.status | replace(' ', '-') | replace('î', 'i') | replace('ă', 'a') }}">
+        <div class="lectie-card-top">
+          <div class="lectie-status-badge">
+            {% if l.status == 'complet' %}✅ Complet
+            {% elif l.status == 'în progres' %}🔄 În progres
+            {% else %}❌ Neînceput
+            {% endif %}
+          </div>
+          {% if l.scor is not none %}
+          <div class="lectie-scor">{{ l.scor }}/100</div>
+          {% endif %}
+        </div>
+        <h3 class="lectie-titlu">{{ l.titlu }}</h3>
+        <p class="lectie-descriere">{{ l.descriere }}</p>
+        <div class="lectie-meta">{{ l.num_pasi }} pași + test final</div>
+        <a href="{{ url_for('lectie', lectie_id=l.id) }}" class="btn btn-lectie
+          {% if l.status == 'complet' %}btn-outline{% elif l.status == 'în progres' %}btn-primary{% else %}btn-secondary{% endif %}">
+          {% if l.status == 'complet' %}Revizuiește
+          {% elif l.status == 'în progres' %}Continuă →
+          {% else %}Începe →
+          {% endif %}
+        </a>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

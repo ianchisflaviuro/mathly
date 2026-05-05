@@ -1,0 +1,78 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Utilizatori – Admin Mathly{% endblock %}
+
+{% block content %}
+<div class="admin-page-header">
+  <h1>Utilizatori</h1>
+  <p>Gestionează conturile de elevi și admini.</p>
+</div>
+
+<!-- Adaugă user -->
+<div class="admin-card">
+  <h2 class="admin-card-title">➕ Adaugă utilizator</h2>
+  <form method="POST" action="{{ url_for('admin_add_user') }}" class="admin-form">
+    <div class="admin-form-row">
+      <div class="form-group">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="ex: elev_maria" required>
+      </div>
+      <div class="form-group">
+        <label>Parolă</label>
+        <input type="text" name="parola" placeholder="parolă simplă" required>
+      </div>
+      <div class="form-group">
+        <label>Nume complet</label>
+        <input type="text" name="nume" placeholder="ex: Maria Ionescu" required>
+      </div>
+      <div class="form-group">
+        <label>Rol</label>
+        <select name="rol">
+          <option value="elev">Elev</option>
+          <option value="admin">Admin</option>
+        </select>
+      </div>
+      <div class="form-group form-group-btn">
+        <button type="submit" class="btn btn-primary">Adaugă</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- Lista useri -->
+<div class="admin-card">
+  <h2 class="admin-card-title">👥 Lista utilizatori</h2>
+  <table class="admin-table">
+    <thead>
+      <tr>
+        <th>Username</th>
+        <th>Nume</th>
+        <th>Rol</th>
+        <th>Parolă</th>
+        <th>Acțiuni</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for username, udata in users.items() %}
+      <tr>
+        <td><code>{{ username }}</code></td>
+        <td>{{ udata.nume }}</td>
+        <td>
+          <span class="role-badge role-{{ udata.rol }}">{{ udata.rol }}</span>
+        </td>
+        <td><code>{{ udata.parola }}</code></td>
+        <td>
+          {% if username != session.username %}
+          <form method="POST" action="{{ url_for('admin_delete_user', username=username) }}"
+                onsubmit="return confirm('Ștergi utilizatorul {{ username }}? Și progresul va fi șters.')">
+            <button type="submit" class="btn btn-sm btn-danger">❌ Șterge</button>
+          </form>
+          {% else %}
+          <span class="text-muted">Tu</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

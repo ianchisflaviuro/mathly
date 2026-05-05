@@ -1,0 +1,60 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Editare {{ lectie.titlu }} – Admin Mathly{% endblock %}
+
+{% block content %}
+<div class="admin-page-header">
+  <h1>✏️ Editare: {{ lectie.titlu }}</h1>
+  <a href="{{ url_for('admin_lectii') }}" class="btn btn-sm btn-outline">← Înapoi la lecții</a>
+</div>
+
+<div class="admin-card">
+  <p class="admin-hint">
+    💡 Editează JSON-ul de mai jos. Asigură-te că structura rămâne validă.
+    Câmpurile obligatorii: <code>id, titlu, modul, descriere, pasi, test</code>.
+  </p>
+
+  <form method="POST" action="{{ url_for('admin_edit_lectie', lectie_id=lectie.id) }}">
+    <div class="form-group">
+      <label>JSON lecție</label>
+      <textarea name="json_data" class="json-editor" rows="40" spellcheck="false">{{ lectie_json }}</textarea>
+    </div>
+    <div class="edit-actions">
+      <button type="submit" class="btn btn-primary">💾 Salvează lecția</button>
+      <a href="{{ url_for('admin_lectii') }}" class="btn btn-outline">Anulează</a>
+    </div>
+  </form>
+</div>
+
+<div class="admin-card">
+  <h3>Structura așteptată</h3>
+  <pre class="code-hint">{
+  "id": "string",
+  "titlu": "string",
+  "modul": "string",
+  "descriere": "string",
+  "pasi": [
+    {
+      "id": "pas1",
+      "explicatie": "HTML/text",
+      "intrebare": "string",
+      "tip": "alegere",
+      "optiuni": ["opt1", "opt2", "opt3", "opt4"],
+      "raspuns_corect": "opt1",
+      "explicatie_gresit": "string"
+    }
+  ],
+  "test": {
+    "intrebari": [
+      {
+        "id": "q1",
+        "intrebare": "string",
+        "tip": "alegere",
+        "optiuni": ["opt1", "opt2", "opt3", "opt4"],
+        "raspuns_corect": "opt1",
+        "explicatie": "string"
+      }
+    ]
+  }
+}</pre>
+</div>
+{% endblock %}

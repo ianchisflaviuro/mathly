@@ -1,0 +1,12 @@
+{
+  "admin": {
+    "parola": "admin123",
+    "rol": "admin",
+    "nume": "Administrator"
+  },
+  "elev1": {
+    "parola": "elev123",
+    "rol": "elev",
+    "nume": "Ion Popescu"
+  }
+}

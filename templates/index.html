@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mathly – Matematica pas cu pas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="landing-body">
+
+<!-- NAVBAR -->
+<nav class="landing-nav">
+  <div class="nav-inner">
+    <a href="/" class="navbar-brand"><span class="brand-icon">🧮</span> Mathly</a>
+    <a href="{{ url_for('login') }}" class="btn btn-primary">Intră în cont</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🚀 Platforma #1 de matematică structurată</div>
+    <h1 class="hero-title">Matematica devine simplă când o înveți <span class="highlight">pas cu pas</span></h1>
+    <p class="hero-subtitle">Nu mai memora. Înțelege. Lecții + teste care nu te lasă să mergi mai departe până nu știi.</p>
+    <div class="hero-cta">
+      <a href="https://wa.me/40700000000?text=Vreau+acces+la+Mathly" class="btn btn-hero btn-wa" target="_blank">
+        👉 Solicită acces pe WhatsApp
+      </a>
+      <a href="{{ url_for('login') }}" class="btn btn-hero btn-outline-hero">Am deja cont →</a>
+    </div>
+    <div class="hero-trust">
+      <span>✅ Fără card</span>
+      <span>✅ Activare manuală</span>
+      <span>✅ Progres salvat</span>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="demo-card">
+      <div class="demo-step-badge">Pasul 2 din 5</div>
+      <div class="demo-question">Ce fracție este echivalentă cu 1/2?</div>
+      <div class="demo-options">
+        <div class="demo-opt correct">✓ 3/6</div>
+        <div class="demo-opt">2/6</div>
+        <div class="demo-opt">1/4</div>
+        <div class="demo-opt">4/6</div>
+      </div>
+      <div class="demo-progress">
+        <div class="demo-bar" style="width: 40%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA -->
+<section class="section section-problem">
+  <div class="container">
+    <h2 class="section-title">Cum arată problema?</h2>
+    <div class="problems-grid">
+      <div class="problem-card">
+        <div class="problem-icon">😤</div>
+        <h3>Nu înțelegi la clasă</h3>
+        <p>Profesorul explică repede, nu ai timp să procesezi, rămâi în urmă.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">🕳️</div>
+        <h3>Ai lacune vechi</h3>
+        <p>Fiecare lecție nouă depinde de una veche pe care nu o știi bine.</p>
+      </div>
+      <div class="problem-card">
+        <div class="problem-icon">📖</div>
+        <h3>Exercițiile nu ajută</h3>
+        <p>Faci exerciții fără să înțelegi de ce, și tot nu reții.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUȚIA -->
+<section class="section section-solution">
+  <div class="container">
+    <h2 class="section-title">Mathly te obligă să înveți corect</h2>
+    <p class="section-subtitle">Nu poți trișa flow-ul. Trebuie să înțelegi pentru a merge mai departe.</p>
+    <div class="solution-grid">
+      <div class="solution-item">
+        <div class="solution-icon">📚</div>
+        <div>
+          <h3>Lecții structurate</h3>
+          <p>Fiecare lecție e împărțită în 5-10 pași logici, explicați simplu.</p>
+        </div>
+      </div>
+      <div class="solution-item">
+        <div class="solution-icon">❓</div>
+        <div>
+          <h3>Întrebări după fiecare pas</h3>
+          <p>Verifici imediat că ai înțeles înainte să continui.</p>
+        </div>
+      </div>
+      <div class="solution-item">
+        <div class="solution-icon">🔒</div>
+        <div>
+          <h3>Nu poți merge mai departe</h3>
+          <p>Dacă răspunzi greșit, primești explicația și trebuie să reîncerci.</p>
+        </div>
+      </div>
+      <div class="solution-item">
+        <div class="solution-icon">📊</div>
+        <div>
+          <h3>Test final cu scor</h3>
+          <p>La final, 10 întrebări. Afli exact ce știi și ce nu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUM FUNCȚIONEAZĂ -->
+<section class="section section-how">
+  <div class="container">
+    <h2 class="section-title">Cum funcționează?</h2>
+    <div class="steps-timeline">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h3>Primești cont</h3>
+          <p>Scrii pe WhatsApp, îți activăm accesul în câteva ore.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h3>Parcurgi lecțiile</h3>
+          <p>Pas cu pas, cu explicații și întrebări la fiecare etapă.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h3>Dai testul final</h3>
+          <p>10 întrebări per lecție. Scor și explicații detaliate.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h3>Știi exact ce lacune ai</h3>
+          <p>Progresul e salvat. Te întorci oricând.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PLANURI -->
+<section class="section section-plans">
+  <div class="container">
+    <h2 class="section-title">Planuri simple</h2>
+    <p class="section-subtitle">Activare manuală prin WhatsApp. Fără card, fără abonament automat.</p>
+    <div class="plans-grid">
+      <div class="plan-card">
+        <h3>Start</h3>
+        <div class="plan-price">Gratuit</div>
+        <ul>
+          <li>✅ Primele 3 lecții</li>
+          <li>✅ Progres salvat</li>
+          <li>✅ Teste finale</li>
+        </ul>
+        <a href="https://wa.me/40700000000?text=Vreau+planul+Start" class="btn btn-outline" target="_blank">Solicită acces</a>
+      </div>
+      <div class="plan-card plan-featured">
+        <div class="plan-badge">Recomandat</div>
+        <h3>Pro</h3>
+        <div class="plan-price">29 lei<span>/lună</span></div>
+        <ul>
+          <li>✅ Toate lecțiile</li>
+          <li>✅ Toate modulele</li>
+          <li>✅ Progres detaliat</li>
+          <li>✅ Suport WhatsApp</li>
+        </ul>
+        <a href="https://wa.me/40700000000?text=Vreau+planul+Pro" class="btn btn-primary" target="_blank">Solicită acces</a>
+      </div>
+      <div class="plan-card">
+        <h3>Family</h3>
+        <div class="plan-price">49 lei<span>/lună</span></div>
+        <ul>
+          <li>✅ Tot ce include Pro</li>
+          <li>✅ Până la 3 conturi</li>
+          <li>✅ Raport progres lunar</li>
+        </ul>
+        <a href="https://wa.me/40700000000?text=Vreau+planul+Family" class="btn btn-outline" target="_blank">Solicită acces</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENȚA -->
+<section class="section section-diff">
+  <div class="container">
+    <div class="diff-inner">
+      <div class="diff-text">
+        <h2>Nu este o platformă de exerciții.</h2>
+        <p class="diff-subtitle">Este un <strong>sistem care te forțează să înțelegi.</strong></p>
+        <div class="diff-compare">
+          <div class="diff-col diff-bad">
+            <h4>❌ Alte platforme</h4>
+            <ul>
+              <li>Sute de exerciții fără explicații</li>
+              <li>Poți trișa și merge mai departe</li>
+              <li>Nu știi ce lacune ai</li>
+            </ul>
+          </div>
+          <div class="diff-col diff-good">
+            <h4>✅ Mathly</h4>
+            <ul>
+              <li>Pas cu pas, cu explicații clare</li>
+              <li>Trebuie să răspunzi corect</li>
+              <li>Progres vizibil și clar</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="section section-final-cta">
+  <div class="container text-center">
+    <h2>Vrei să înveți matematică fără blocaje?</h2>
+    <p>Scrie-ne pe WhatsApp și îți activăm contul.</p>
+    <a href="https://wa.me/40700000000?text=Vreau+acces+la+Mathly" class="btn btn-hero btn-wa" target="_blank">
+      👉 Scrie-ne pe WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="landing-footer">
+  <div class="container">
+    <p>© 2024 Mathly · Matematică pas cu pas · <a href="{{ url_for('login') }}">Login</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

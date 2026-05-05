@@ -1,0 +1,67 @@
+{% extends "admin/base_admin.html" %}
+{% block title %}Progres Elevi – Admin Mathly{% endblock %}
+
+{% block content %}
+<div class="admin-page-header">
+  <h1>Progres elevi</h1>
+  <p>Vizualizează progresul detaliat al fiecărui elev.</p>
+</div>
+
+{% if elevi_progres %}
+  {% for elev in elevi_progres %}
+  <div class="admin-card" id="{{ elev.username }}">
+    <div class="admin-card-header">
+      <h2 class="admin-card-title">{{ elev.nume }} <code>@{{ elev.username }}</code></h2>
+      <form method="POST" action="{{ url_for('admin_reset_progres', username=elev.username) }}"
+            onsubmit="return confirm('Resetezi tot progresul lui {{ elev.username }}?')">
+        <button type="submit" class="btn btn-sm btn-danger">🔄 Reset progres</button>
+      </form>
+    </div>
+
+    <table class="admin-table">
+      <thead>
+        <tr>
+          <th>Lecție</th>
+          <th>Status</th>
+          <th>Scor test</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for l in elev.lectii %}
+        <tr>
+          <td>{{ l.titlu }}</td>
+          <td>
+            {% if l.status == 'complet' %}
+              <span class="status-badge status-complet">✅ Complet</span>
+            {% elif l.status == 'în progres' %}
+              <span class="status-badge status-progres">🔄 În progres</span>
+            {% else %}
+              <span class="status-badge status-neinceput">❌ Neînceput</span>
+            {% endif %}
+          </td>
+          <td>
+            {% if l.scor is not none %}
+              <span class="scor-badge {% if l.scor >= 80 %}scor-great{% elif l.scor >= 60 %}scor-ok{% else %}scor-poor{% endif %}">
+                {{ l.scor }}/100
+              </span>
+            {% else %}
+              <span class="text-muted">–</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+    <div class="elev-summary">
+      {% set complete = elev.lectii | selectattr('status', 'eq', 'complet') | list | length %}
+      <strong>{{ complete }}</strong> din <strong>{{ elev.lectii | length }}</strong> lecții completate.
+    </div>
+  </div>
+  {% endfor %}
+{% else %}
+  <div class="admin-card">
+    <p class="admin-empty">Nu există elevi cu progres înregistrat.</p>
+  </div>
+{% endif %}
+{% endblock %}
